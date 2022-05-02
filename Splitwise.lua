@@ -1,8 +1,8 @@
 -- Inofficial Splitwise Extension (www.splitwise.com) for MoneyMoney
 -- Fetches balances from Splitwise API and returns them as securities
 --
--- Username: Whatever you want it to be
--- Password: Splitwise API Bearer Token
+-- Username: Splitwise API Bearer Token
+-- Password: Whatever you want it to be
 --
 -- Copyright (c) 2022 Sebastian Lauber
 --
@@ -39,7 +39,7 @@ local bearer
 
 function InitializeSession (protocol, bankCode, username, reserved, password)
   -- stores the bearer token and fetches user information
-  bearer = password
+  bearer = username
   local user = AuthorizedRequest("GET", "get_current_user", "user")
   accountNumber = string.format("%s (%s)", user["email"], user["id"])
   owner = string.format("%s %s", GetEmptyStringIfNil(user["first_name"]), GetEmptyStringIfNil(user["last_name"]))
