@@ -11,6 +11,6 @@ Instructions
 3. Create a new app ("Register your application" button).
 4. Copy the the MoneyMoney extension Lua file `Splitwise.lua` to the extensions directory (`~/Library/Containers/com.moneymoney-app.retail/Data/Library/Application Support/MoneyMoney`) and restart MoneyMoney.
 5. Create a new account, select "Splitwise" as account type.
-6. Enter use your freshly generated API key (result of step 3) as username and `dummy` password.
+6. If you run MoneyMoney version 2.4.12 or newer, you can just enter your API key from step 3. Else enter your API key as username and `dummy` password.
 
 ![ScreenShot](moneymoney-splitwise.png)

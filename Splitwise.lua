@@ -62,7 +62,7 @@ function AuthorizedRequest (method, endpoint, dictRoot)
   local url = string.format("%s/v%s/%s", url, version, endpoint)
   local headers = {
     Authorization = string.format("Bearer %s", bearer)
-  }  
+  }
   local connection = Connection()
   local content = connection:request(method, url, nil, nil, headers)
   if dictRoot then
@@ -77,7 +77,7 @@ function RefreshAccount (account, since)
   local securities = {}
   -- iterate over your friends
   for i,friend in ipairs(friends)
-  do 
+  do
     -- iterate over the balances (which hold the balances by currency)
     for j,currency in ipairs(friend["balance"])
       do table.insert(securities,
@@ -104,3 +104,5 @@ function GetEmptyStringIfNil(s)
   else return s
   end
 end
+
+-- SIGNATURE: MC0CFQCTcWe9ZYUnZy3AMOJ31uQZPd9+lQIUZ2OD3zOFzYaA2qKn1exen31ny1s=
